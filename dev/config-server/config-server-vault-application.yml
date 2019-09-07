@@ -3,7 +3,7 @@ server:
   ssl:
     enabled: true
     # If client auth is set to need, then and client which will connect to config server will also provide it's certificate already shared by config server with him
-    #client-auth: need
+    client-auth: need
     key-store: file:${HOME}/app-config/config-server-tls.jks
     key-store-password: config-server
     key-alias: config-server

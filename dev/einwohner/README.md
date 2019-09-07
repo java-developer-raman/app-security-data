@@ -2,7 +2,7 @@ Files
 =====
 1. einwohner-tls.jks : Einwohner server's key-store containing it's public key and private key for TLS communication.
 2. einwohner-public-key.crt : Certificate / Public key for all other applications to connect config server via https
-3. config-server-trust-store.jks : Trust store to be used by einwohner app to trust other applications e.g. config-server. Their certificates will be present in this store.
+3. einwohner-trust-store.jks : Trust store to be used by einwohner app to trust other applications e.g. config-server. Their certificates will be present in this store.
 4. einwohner-application.properties : einwohner app server's properties.
 
 Einwohner- How to create keystores / public certificates
