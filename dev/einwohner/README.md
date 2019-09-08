@@ -18,3 +18,7 @@ Einwohner- How to create keystores / public certificates
 3. Import config-server certificate into einwohner trust store
  keytool -import -alias einwohner -file ../config-server/config-server-public-key.crt -storetype pkcs12 -keystore einwohner-trust-store.jks
  Password: einwohner
+ 
+How to store secrets
+====================
+./vault-write-secret.sh einwohner-dev-1.0-SNAPSHOT-config.json
