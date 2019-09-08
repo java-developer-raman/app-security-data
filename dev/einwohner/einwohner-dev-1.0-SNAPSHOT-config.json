@@ -1,0 +1,19 @@
+{
+  "server.ssl.enabled":"true",
+  "server.ssl.client-auth":"need",
+  "server.ssl.trust-store":"/home/raman/app-config/einwohner-trust-store.jks",
+  "server.ssl.trust-store-password":"einwohner",
+  "server.ssl.trust-store-type":"pkcs12",
+  "spring.datasource.url":"jdbc:mysql://192.168.2.108:3306/einwohner_dev?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC",
+  "spring.datasource.username":"einwohner_dev_app_user",
+  "spring.datasource.password":"vault:v1:KjoQHOho2/Sg46Z+TVbq9+7DK9VtwDagT0Kq6bBnR6PV6FCaHHYjbqKLDnQGHQHGn40K",
+  "db.admin.user":"einwohner_dev_admin_user",
+  "db.admin.password":"vault:v1:KiBfAI9929BGzI9en/F77tbkucymwzN/1fKlR0FfxMRZ+8qhRy0f0oETPlgf2K2JjzdzeR0=",
+  "vault.uri":"https://127.0.0.1:8300",
+  "vault.authentication":"CERT",
+  "vault.backend":"secret",
+  "vault.kv-version":"1",
+  "vault.ssl.key-store":"file:/home/raman/app-config/vault-cert.pkcs12",
+  "vault.ssl.key-store-password":"vault-cert",
+  "vault.ssl.cert-auth-path":"cert"
+}
