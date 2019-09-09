@@ -26,7 +26,9 @@ Config Server - How to create keystores / public certificates
 2. Create public certificate for other applications to add in their trust store
  keytool -export -alias config-server -file config-server-public-key.crt -keystore config-server-tls.jks
 
-3. Import einwohner certificate into config-server trust store
+3. cp config-server-tls.jks config-server-trust-store.jks (Copy tls file into trust-store file)
+
+4. Import einwohner certificate into config-server trust store
  keytool -import -alias einwohner -file ../einwohner/einwohner-public-key.crt -storetype pkcs12 -keystore config-server-trust-store.jks
 
 4. Create RSA pair for encryption and decryption

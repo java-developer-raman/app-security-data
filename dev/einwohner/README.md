@@ -15,8 +15,10 @@ Einwohner- How to create keystores / public certificates
  keytool -export -alias einwohner -file einwohner-public-key.crt -keystore einwohner-tls.jks
  Password: einwohner
 
-3. Import config-server certificate into einwohner trust store
- keytool -import -alias einwohner -file ../config-server/config-server-public-key.crt -storetype pkcs12 -keystore einwohner-trust-store.jks
+3. cp einwohner-tls.jks einwohner-trust-store.jks (So we have a trust store containing public and private keys of einwohner already)
+
+4. Now import config-server certificate into einwohner trust store
+ keytool -import -alias config-server -file ../config-server/config-server-public-key.crt -storetype pkcs12 -keystore einwohner-trust-store.jks
  Password: einwohner
  
 How to store secrets
