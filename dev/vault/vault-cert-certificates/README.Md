@@ -8,6 +8,12 @@ Command to login into Vault
 ===========================
 ./vault login -method=cert -client-cert=vault-cert-certificate.pem -client-key=vault-cert-private-key.pem name=vault-cert
 
+curl \
+    --request POST \
+    --cert vault-cert-certificate.pem \
+    --key vault-cert-private-key.pem \
+    --data '{"name": "vault-cert"}' \
+    https://127.0.0.1:8300/v1/auth/cert/login
 
 Command to create a keystore
 ============================
