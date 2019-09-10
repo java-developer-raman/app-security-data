@@ -20,7 +20,10 @@ Einwohner- How to create keystores / public certificates
 4. Now import config-server certificate into einwohner trust store
  keytool -import -alias config-server -file ../config-server/config-server-public-key.crt -storetype pkcs12 -keystore einwohner-trust-store.jks
  Password: einwohner
- 
+
+5. Import vault certificate in trust store 
+  keytool -import -alias vault -file /home/raman/programs/servers/vault/vault-tls-certificates/vault-tls-certificate.crt -storetype pkcs12 -keystore einwohner-trust-store.jks
+
 How to store secrets
 ====================
 ./vault-write-secret.sh einwohner-dev-1.0-SNAPSHOT-config.json
