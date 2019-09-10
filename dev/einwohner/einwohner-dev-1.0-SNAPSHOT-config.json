@@ -4,7 +4,7 @@
   "spring.datasource.password":"vault:v1:KjoQHOho2/Sg46Z+TVbq9+7DK9VtwDagT0Kq6bBnR6PV6FCaHHYjbqKLDnQGHQHGn40K",
   "db.admin.user":"einwohner_dev_admin_user",
   "db.admin.password":"vault:v1:KiBfAI9929BGzI9en/F77tbkucymwzN/1fKlR0FfxMRZ+8qhRy0f0oETPlgf2K2JjzdzeR0=",
-  "vault.uri":"https://127.0.0.1:8300",
+  "vault.uri":"https://192.168.2.108:8300",
   "vault.authentication":"CERT",
   "vault.backend":"secret",
   "vault.kv-version":"1",

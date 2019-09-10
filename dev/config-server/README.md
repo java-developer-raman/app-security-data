@@ -31,6 +31,9 @@ Config Server - How to create keystores / public certificates
 4. Import einwohner certificate into config-server trust store
  keytool -import -alias einwohner -file ../einwohner/einwohner-public-key.crt -storetype pkcs12 -keystore config-server-trust-store.jks
 
-4. Create RSA pair for encryption and decryption
+5. Import vault certificate in trust store 
+  keytool -import -alias vault -file /home/raman/programs/servers/vault/vault-tls-certificates/vault-tls-certificate.crt -storetype pkcs12 -keystore config-server-trust-store.jks
+
+6. Create RSA pair for encryption and decryption
   keytool -genkeypair -alias config-server-crypto -keyalg RSA -keysize 2048 -storetype pkcs12 -keystore config-server-crypto.jks
   Password: config-server-crypto
