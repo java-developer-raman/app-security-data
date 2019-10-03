@@ -1,1 +1,0 @@
-CA root and Intermediate certificates created via Vault PKI service. These are required to produce further certificates for clients.
