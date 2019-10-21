@@ -57,13 +57,17 @@ keytool -delete -noprompt -alias vault -keystore config-server-trust-store.jks
 
 2. Create Encryption key ring (Here "einwohner" is keyname, choose your own name)
    vault write -f transit/keys/einwohner
+   vault write -f transit/keys/einwohner-startup
 
 3. Encrypt the text
    vault write transit/encrypt/einwohner plaintext=$(base64 <<< "einwohner_dev_app_user")
    Result : vault:v1:KjoQHOho2/Sg46Z+TVbq9+7DK9VtwDagT0Kq6bBnR6PV6FCaHHYjbqKLDnQGHQHGn40K
    vault write transit/encrypt/einwohner plaintext=$(base64 <<< "einwohner_dev_admin_user")
    Result : vault:v1:wCt0DQunfTmiAQ39yoKcmiLbPKbPcEL2M1SBVXsJTEz9VPzxf2/y5XOTaTiJflFMWZ3Ld+Q=
-
+   
+   vault write transit/encrypt/einwohner-startup plaintext=$(base64 <<< "einwohner")
+   Result : vault:v1:zTvY3JafvAe6ZUdMLu1jj12l0PUXmxL7OqQBB0XnFLLl9Qi4h/M=
+base64 --decode <<< $(./vault write transit/decrypt/einwohner ciphertext="vault:v1:zTvY3JafvAe6ZUdMLu1jj12l0PUXmxL7OqQBB0XnFLLl9Qi4h/M=")
 4. Decrypt the text
    base64 --decode <<< $(./vault write transit/decrypt/einwohner ciphertext="vault:v1:D+2x1DJBsuZJ3elTkeiCZmJqbGWOVKZglsCwzr+HUcwGeFjSw1B2FwVtGG2tSoSYj4Jv")
    base64 --decode <<< ZWlud29obmVyX2Rldl9hcHBfdXNlcgo=
