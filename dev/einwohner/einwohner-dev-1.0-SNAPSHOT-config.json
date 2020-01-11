@@ -1,5 +1,5 @@
 {
-  "spring.datasource.url":"jdbc:mysql://192.168.2.108:3306/einwohner_dev?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC",
+  "spring.datasource.url":"jdbc:mysql://192.168.2.109:3306/einwohner_dev?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC",
   "spring.datasource.username":"einwohner_dev_app_user",
   "spring.datasource.password":"vault:v1:E4ccfCWZRgn0jMh8seYaPMvcsPbSmWq3NTgN+3TU6KjStbOolFkOBqW8PjbhbVDJH5Sq",
   "db.admin.user":"einwohner_dev_admin_user",
