@@ -9,3 +9,7 @@ How to store secrets
 How to get secrets
 ==================
 $HOME/programs/servers/vault/vault kv get secret/einwohner-1.0-SNAPSHOT,dev
+
+
+Steps to store properties
+=========================
